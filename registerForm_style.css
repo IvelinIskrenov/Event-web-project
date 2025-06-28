@@ -1,0 +1,185 @@
+body {
+    font-family: Arial, sans-serif;
+    color: rgba(218, 218, 218, 0.93);
+    background-color: #000;
+    margin: 0;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Background overlay */
+body::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('BG5.jpg') center/cover no-repeat;
+    z-index: -1;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    margin: 20px;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Form container styles */
+.RegisterForm , .LoginForm, .AddFunction, .RemoveFunction {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(90, 236, 255, 0.15);
+    padding: 20px;
+    border: 2px solid rgb(221, 255, 0);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    max-width: 400px;
+    width: 100%;
+}
+
+.EventForm {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(90, 236, 255, 0.15);
+  padding: 30px;
+  border: 2px solid rgb(221, 255, 0);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  max-width: 500px;
+  width: 100%;
+  margin: 50px 0;
+}
+
+/* Label styles */
+label {
+    font-weight: bold;
+}
+
+/* Input, select, and button styles */
+input, select, button {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid rgb(214, 252, 0);
+    border-radius: 4px;
+    width: calc(100% - 20px);
+}
+
+li, ul {
+    display: inline-block;
+    vertical-align: middle; /* За подравняване */
+    margin-right: 10px;     /* Малко разстояние между тях */
+}
+
+
+
+input:hover {
+    border-color: #f532ff;
+}
+
+button {
+    background-color: hsl(60, 100%, 50%);
+    color: rgb(34, 0, 230);
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    transition: all 0.4s ease;
+}
+
+.Back {
+
+  margin: 10px;
+  
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+    background-color: #f532ff;
+    color: #000;
+}
+
+h1 {
+    align-self: center;
+}
+
+p, a {
+    color: #fff;
+}
+
+a:hover {
+    color: blueviolet;
+}
+
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }

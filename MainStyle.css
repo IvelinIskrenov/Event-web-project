@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    color: rgba(218, 218, 218, 0.93);
+    background-color: #000;
+    margin: 0;
+    height: 100vh;
+    
+    position: relative;
+}
+
+/* Background overlay */
+body::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('BG5.jpg') center/cover no-repeat;
+    z-index: -1;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Label styles */
+label {
+    font-weight: bold;
+}
+
+/* Input, select, and button styles */
+input, select, button {
+    padding: 10px;
+    font-size: 16px;
+    border: 3px solid rgb(214, 252, 0);
+    border-radius: 4px;
+    width: calc(100% - 20px);
+}
+
+input:hover {
+    border-color: #f532ff;
+}
+
+button {
+    background-color: hsl(60, 100%, 50%);
+    color: rgb(34, 0, 230);
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.4s ease;
+}
+
+button:hover {
+    background-color: #f532ff;
+    color: #000;
+}
+
+h1 {
+    align-self: center;
+}
+
+p, a {
+    color: #fff;
+}
+
+a:hover {
+    color: blueviolet;
+}
+
+.LogOutB {
+    position: absolute;
+    width: 7%;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 100;
+}
+
+.favorites {
+    position: absolute;
+    width: 15%;
+    top: 100px;
+    left: 100px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid hsl(60, 100%, 50%);
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 100;
+}
+
+.eventsPeople {
+    max-height: 500px;
+    position: absolute;
+    width: 35%;
+    top: 100px;
+    left: 450px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid hsl(60, 100%, 50%);
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 100; 
+    overflow-y: scroll;
+}
+
+.eventsPeople li {
+    margin-bottom: 20px;  /* разстояние под всеки ред/елемент */
+}
+
+.AddB, .RemoveB {
+    width: 45%;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.event-frame {
+    border: 2px solid hsl(60, 100%, 50%);      /* тънка, тъмна рамка */
+    border-radius: 4px;          /* за леко заоблени ъгли */
+    padding: 14px;               /* вътрешен отстъп */
+    margin-bottom: 12px;         /* разстояние между събитията */
+    background-color: #fafafa;   /* светъл фон (по избор) */
+    list-style: none;            /* махаме стандартната „булета“ на li */
+
+    color: #fff;  /* правим текста бял */
+    background-image: url('BG2.jpg'); /* път до твоята картинка */
+    background-size: cover;       /* картинката да покрива целия елемент */
+    background-position: center;  /* центрираме фона */
+    background-repeat: no-repeat; /* без повтаряне */
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+}
+
+.Comments {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  resize: none;
+  overflow: hidden;
+  font-size: 16px;
+}
